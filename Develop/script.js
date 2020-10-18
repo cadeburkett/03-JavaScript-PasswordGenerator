@@ -24,7 +24,17 @@ var specChars= confirm("Would you like Special characters?");
 var emoChars = confirm("Would you like emojis?");
 console.log(lowChars, upperChars, numChars, specChars)
 
+var userChoices = [];
 
-}
+if(lowercaseTrue) {userChoices.push(lowercase)}
+if(uppercaseTrue) {userChoices.push(uppercase)}
+if(numbericTrue) {userChoices.push(numberic)}
+if(specialTrue) {userChoices.push(special)}
+console.log(userChoices)
 
-})
+var input = confirm("Password length is " + length + ". Password includes lowercase letters: " + lowercaseTrue + ". Password includes uppercase letters: " + uppercaseTrue + ". Password contains numbers: " + numbericTrue + ". Password contains special characters: " + specialTrue + ".");
+  if(input.confirm === true) {
+    generatePassword
+  }
+
+ 
