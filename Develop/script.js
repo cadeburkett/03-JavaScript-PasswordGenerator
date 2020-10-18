@@ -37,4 +37,18 @@ var input = confirm("Password length is " + length + ". Password includes lowerc
     generatePassword
   }
 
- 
+  var password = "";
+
+  while (password.length < length) {
+    for (let i = 0; i < userChoices.length; i++) {
+      if (password.length < length) {
+        let rand = Math.floor(Math.random() * userChoices[i].length)
+        password += userChoices[i][rand]
+      }
+    }
+    console.log(password, `password length: ${password.length}`)
+    passwordText.textContent = password
+  }
+}
+
+})
